@@ -3,11 +3,11 @@ import streamlit as st
 from snowflake.snowpark.functions import col
 
 # Write directly to the app
-st.title(":cup_with_straw: Customize Your Smoothie! :cup_with_straw:")
+st.title(":tropical_drink: Welcome to Melanie's Smoothie Bar! :ctropical_drink:")
 
 st.write(
   """
- Choose the fruits you want in your custom smoothie!
+ You can mix up to 5 ingredients for best taste!
   """
 )
 
