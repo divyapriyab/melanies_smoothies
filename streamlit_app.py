@@ -45,4 +45,5 @@ if ingredients_list:
 #New section to display smoothiefruit nutrition information
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/all")
-st.text(fruityvice_response.json())
+#st.text(fruityvice_response.json())
+sf_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
