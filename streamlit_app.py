@@ -28,8 +28,9 @@ ingredients_list = st.multiselect(
 )
 if ingredients_list:
     ingredients_string = ' '.join(ingredients_list)
-    st.subheader(ingredients_list + 'Nutrition Information
-    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon" + ingredients_list)
+    st.subheader(ingredients_string + 'Nutrition Information')
+    for fruit_chose in ingredients_list:
+    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chosen)
     sf_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
   
 
