@@ -29,10 +29,11 @@ st.dataframe(pd_df)
 st.stop()
 
 ingredients_list = st.multiselect(
-    'choose up to 5 ingredients:'
-, my_dataframe
-,  max_selections=5    
+    'Choose up to 5 ingredients:',
+    pd_df['FRUIT_NAME'].tolist(),
+    max_selections=5
 )
+
 if ingredients_list:
     ingredients_string = ' '.join(ingredients_list)
 
