@@ -33,7 +33,8 @@ for fruit_chosen in   ingredients_list:
    ingredients_string+= fruit_chosen + ' '
    st.subheader(fruit_chosen  +  'Nutrition Information')
    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chosen)
-   sf_df = st.dataframe(data=fruityvice_response.json(), use_container_width=True)
+   sf_df = pd.json_normalize(fruityvice_response.json(), use_container_width=True)
+   st.dataframe(sf_df,use_container_width=True)
   
 my_insert_stmt = f"""
         INSERT INTO smoothies.public.orders(ingredients, name_on_order)
