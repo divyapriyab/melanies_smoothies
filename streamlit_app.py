@@ -43,16 +43,6 @@ if ingredients_list:
 
 
 #New section to display smoothiefruit nutrition information
-import streamlit as st
 import requests
-st.title(":tropical_drink: Welcome to Melanie's Smoothie Bar! :tropical_drink:")
-
-st.write(
-  """
- You can mix up to 5 ingredients for best taste!
-  """
-)
-
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/all")
-st.text(smoothiefroot_response.json())
-
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
