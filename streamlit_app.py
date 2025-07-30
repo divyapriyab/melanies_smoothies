@@ -45,4 +45,4 @@ if ingredients_list:
 #New section to display smoothiefruit nutrition information
 import requests
 fruityvice_response = requests.get(" https://fruityvice.com/api/fruit/watermelon ")
-st.text(smoothiefroot_response.json())
+st.text(fruityvice_response.json())
